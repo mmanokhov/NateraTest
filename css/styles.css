@@ -1,0 +1,752 @@
+@font-face {
+  font-family: 'GothamProReg';
+  src: url('../fonts/GothamCyrillic/GothaProReg.otf') format("opentype");
+}
+
+@font-face {
+  font-family: 'GothamProBol';
+  src: url('../fonts/GothamCyrillic/GothaProBol.otf') format("opentype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-width: 1024px;
+    padding: 0 40px;
+    font-family: GothamProReg;
+    font-size: 14px;
+    color: #020202;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: inherit;
+}
+
+.content {
+    max-width: 1274px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.fl-left {
+    float: left;
+}
+
+.fl-right {
+    float: right;
+}
+
+.fixed {
+    box-shadow: 0 0 20px rgba(2, 2, 2, 0.3);
+}
+
+.title {
+    display: inline-block;
+    width: 295px;
+    height: 75px;
+    position: relative;
+}
+
+.logo {
+    display: inline-block;
+    width: 100%;
+    height: 110px;
+    line-height: 1000px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.logo > span {
+    display: block;
+    width: 100%;
+    height: 75px;
+    background: url('../img/logo.png') no-repeat 0 20px #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.logo::before {
+    content: '';
+    display: block;
+    height: 1px;
+    background: #020202;
+    opacity: 1;
+    position: absolute;
+    left: 72px;
+    right: 72px;
+    bottom: 34px;
+    z-index: 0;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.logo::after {
+    content: '';
+    display: block;
+    width: 230px;
+    height: 14px;
+    margin-left: -115px;
+    background: url('../img/production.png') no-repeat 50% 50% transparent;
+    opacity: 1;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 0;
+    transition: all 0.3s;
+}
+
+.fixed .logo {
+    height: 100%;
+}
+
+.fixed .logo::before {
+    bottom: 70px;
+    opacity: 0;
+}
+
+.fixed .logo::after {
+    bottom: 0;
+    opacity: 0;
+}
+
+nav {
+    margin-left: 36%;
+}
+
+.bold {
+    font-weight: bold;
+    font-family: GothamProBol;
+}
+
+ul.menu > li {
+    max-width: 130px;
+    display: inline-block;
+    padding: 32px 33px 27px 0;
+    vertical-align: top;
+}
+
+.next-box[class] {
+    padding: 15px 0 0;
+}
+
+.menu a {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover, a:active {
+    color: #0e95dd;
+}
+
+.menu a.next {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #7b7b7b;
+    overflow: hidden;
+    line-height: 100px;
+    background: url('../img/ic_arrow_forward.png') no-repeat 50% 50% transparent;
+}
+
+.animate {
+    transition: all 0.3s;
+}
+
+.img-wrapper {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(2, 2, 2, 0.3);
+}
+
+.img-wrapper img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.announce {
+    line-height: 20px;
+}
+
+.title-1 {
+    font-size: 44px;
+    letter-spacing: 2px;
+    color: #9a9a9a;
+    position: relative;
+    transform-origin: 100% 100%;
+    transform: rotate(-90deg);
+}
+
+.title-1::after {
+    content: '';
+    display: inline-block;
+    height: 2px;
+    margin: 0 30px;
+    background: #9a9a9a;
+    vertical-align: middle;
+}
+
+.title-2 {
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.title-3 {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.details {
+    display: inline-block;
+    padding: 16px 65px 14px 20px;
+    border: 2px solid;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #9a9a9a;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.details::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 100%;
+    background: url('../img/ic_arrow_drop_up.png') no-repeat 0 50% transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.showbusiness-section {
+    padding-top: 11%;
+    position: relative;
+    overflow: hidden;
+}
+
+.showbusiness-section::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    margin-top: 5%;
+    padding-bottom: 47%;
+    background: #f4f4f4;
+    position: absolute;
+    z-index: -1;
+}
+
+#showbusiness {
+    width: 100%;
+    margin-top: 4%;
+    position: absolute;
+    right: 3%;
+    text-align: right;
+}
+
+#showbusiness::after {
+    width: 17%;
+}
+
+.showbiz-col-1 {
+    width: 35%;
+    max-width: 444px;
+    text-align: center;
+}
+
+.showbiz-img-1 {
+    width: 54%;
+    height: 0;
+    padding-bottom: 50%;
+    max-width: 696px;
+    margin-left: 36%;
+    top: -15px;
+}
+
+.showbiz-choise {
+    display: inline-block;
+    padding: 31% 20px 18%;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.showbiz-title-1 {
+    font-size: 44px;
+    padding: 0 20px;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+
+.showbiz-author-1 {
+    display: block;
+    padding: 5% 20px 12%;
+    font-size: 16px;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #9a9a9a;
+}
+
+.look-in {
+    display: inline-block;
+    padding: 16px 65px 14px;
+    margin-bottom: 10px;
+    border: 2px solid;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #020202;
+    transition: color 0.3s;
+}
+
+.showbiz-col-2 {
+    width: 64%;
+}
+
+.showbiz-img-2 {
+    width: 34%;
+    height: 0;
+    max-width: 283px;
+    padding-bottom: 43%;
+    margin-right: 30px;
+}
+
+.showbiz-title-2 {
+    padding: 8% 8% 3% 2%;
+}
+
+.showbiz-announce-2 {
+    padding: 0 7% 3% 3%;
+}
+
+.showbiz-col-3 {
+    width: 35%;
+    max-width: 444px;
+    text-align: right;
+    margin-top: -6%;
+    padding-bottom: 6%;
+}
+
+.showbiz-img-3 {
+    display: inline-block;
+    width: 87%;
+    max-width: 388px;
+    height: 0;
+    padding-bottom: 57%;
+}
+
+.showbiz-title-3 {
+    display: inline-block;
+    width: 64%;
+    padding: 9% 20px;
+}
+
+.showbiz-announce-3 {
+    padding: 0 20px 0 20%;
+}
+
+.art-section {
+    margin-top: -7%;
+    padding-top: 12%;
+    position: relative;
+    text-align: right;
+    overflow: hidden;
+}
+
+.art-section::before {
+    content: '';
+    display: block;
+    width: 49%;
+    height: 0;
+    max-width: 634px;
+    padding-bottom: 42%;
+    background: #f4f4f4;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+#art {
+    width: 100%;
+    margin-top: -3%;
+    position: absolute;
+    right: 36%;
+    text-align: right;
+}
+
+#art::after {
+    width: 9%;
+}
+
+.art-col-1 {
+    width: 65%;
+    padding: 5% 40px 0;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.art-col-1 .details {
+    margin-left: 8%;
+}
+
+.art-img-1 {
+    width: 91%;
+    height: 0;
+    max-width: 693px;
+    padding-bottom: 51%;
+}
+
+.art-title-1 {
+    width: 77%;
+    padding: 4% 8% 5%;
+}
+
+.art-announce-1 {
+    width: 62%;
+    padding: 0 8% 6%;
+}
+
+.art-col-2 {
+    display: inline-block;
+    width: 35%;
+    text-align: center;
+    margin-top: -9%;
+    padding-bottom: 9%;
+}
+
+.art-img-2 {
+    display: inline-block;
+    width: 54%;
+    height: 0;
+    max-width: 245px;
+    padding-bottom: 53%;
+}
+
+.art-title-2 {
+    padding: 3% 20px 3%;
+}
+
+.art-img-3 {
+    display: inline-block;
+    width: 87%;
+    height: 0;
+    max-width: 390px;
+    padding-bottom: 86%;
+}
+
+.art-title-3 {
+    text-align: left;
+    padding: 8% 7%;
+}
+
+.fashion-section {
+    margin-top: -9%;
+    padding-top: 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.fashion-section::before {
+    content: '';
+    display: block;
+    width: 57%;
+    height: 0;
+    padding-bottom: 44%;
+    background: #f4f4f4;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+#fashion {
+    width: 100%;
+    margin-top: -15%;
+    position: absolute;
+    left: -60%;
+    text-align: right;
+}
+
+#fashion::after {
+    width: 13%;
+}
+
+.fashion-left-side {
+    width: 50%;
+    padding: 5% 40px;
+    box-sizing: border-box;
+}
+
+.fashion-col-1 {
+    display: inline-block;
+    width: 31%;
+    margin: 0 1% 1% 0;
+    vertical-align: top;
+}
+
+.fashion-col-1:first-child {
+    vertical-align: bottom;
+}
+
+.fashion-col-1:nth-child(2) {
+    margin-right: 29%;
+    vertical-align: bottom;
+}
+
+.fashion-img-1 {
+    width: 100%;
+    max-width: 190px;
+    box-shadow: 0 0 20px rgba(2, 2, 2, 0.3);
+}
+
+.fashion-col-2 {
+    margin-left: 50%;
+    margin-top: -7%;
+    padding-bottom: 7%;
+}
+
+.fashion-img-2 {
+    width: 94%;
+    height: 0;
+    max-width: 593px;
+    padding-bottom: 78%;
+}
+
+.fashion-title-2 {
+    width: 47%;
+    padding: 5% 21% 6%;
+}
+
+.fashion-announce-2 {
+    width: 65%;
+    padding: 0 21% 4%;
+}
+
+.fashion-col-2 .details {
+    margin-left: 21%;
+}
+
+.society-section {
+    margin-top: -6%;
+    position: relative;
+}
+
+.society-section::before {
+    content: '';
+    display: block;
+    width: 34%;
+    height: 0;
+    padding-bottom: 34%;
+    background: #f4f4f4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#society {
+    width: 50%;
+    position: absolute;
+    top: -180px;
+    left: -18%;
+    text-align: right;
+}
+
+#society::after {
+    width: 14%;
+}
+
+.society-col-1 {
+    display: inline-block;
+    width: 34%;
+    padding: 0 7% 0 3%;
+    box-sizing: border-box;
+    vertical-align: top;
+    position: relative;
+    top: -110px;
+}
+
+.society-img-1 {
+    width: 100%;
+    height: 0;
+    max-width: 299px;
+    padding-bottom: 121%;
+}
+
+.society-title-1 {
+    padding: 6% 0;
+}
+
+.society-col-2 {
+    display: inline-block;
+    width: 15%;
+    margin: 5% 5px;
+    vertical-align: top;
+}
+
+.society-img-2 {
+    max-width: 100%;
+    margin-bottom: 2%;
+    box-shadow: 0 0 20px rgba(2, 2, 2, 0.3);
+}
+
+.navigation-section, footer {
+    margin: 0 -40px;
+    background: #131313;
+    overflow: hidden;
+}
+
+.navigation-links {
+    display: inline-block;
+    margin: 5% 5% 2% 3%;
+    vertical-align: top;
+    font-size: 14px;
+    color: #fff;
+}
+
+.navigation-links h4 {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.navigation-links li {
+    margin: 20px 0;
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.subscribe-form {
+    display: inline-block;
+    width: 14%;
+    margin-top: 5%;
+    margin-right: 40px;
+    vertical-align: top;
+    color: #fff;
+}
+
+.subscribe-form label {
+    text-transform: uppercase;
+}
+
+.subscribe-form span {
+    font-size: 10px;
+    line-height: 20px
+}
+
+.email-wrapper {
+    display: inline-block;
+    margin: 20px 0;
+    position: relative;
+}
+
+.email-wrapper input[type="email"] {
+    width: 100%;
+    padding: 5px 20px 5px 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.email-wrapper input[type="submit"] {
+    width: 20px;
+    border: none;
+    background: url('../img/ic_arrow_drop_up.png') no-repeat 50% 50% transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+footer {
+    padding: 40px 0 20px;
+}
+
+footer .content {
+    position: relative;
+}
+
+footer .content::before {
+    content: '';
+    display: block;
+    height: 1px;
+    background: #ababab;
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    top: -40px;
+}
+
+.footer-links {
+    margin-right: 40px;
+}
+
+.footer-links > li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 150px;
+    overflow: hidden;
+}
+
+.footer-link:hover {
+    opacity: 0.5;
+}
+
+.footer-link.vk {
+    background: url('../img/vk_icon.png') no-repeat 50% 50% transparent;
+}
+
+.footer-link.fb {
+    background: url('../img/fb_icon.png') no-repeat 50% 50% transparent;
+}
+
+.footer-link.twitter {
+    background: url('../img/twitter_icon.png') no-repeat 50% 50% transparent;
+}
+
+.footer-link.instagram {
+    background: url('../img/instagram_icon.png') no-repeat 50% 50% transparent;
+}
+
+.footer-line-1 {
+    margin-bottom: 14px;
+    padding-left: 40px;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-line-2 {
+    margin-bottom: 8px;
+    padding-left: 40px;
+    font-size: 12px;
+    color: #757575;
+}
