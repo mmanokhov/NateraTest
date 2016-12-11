@@ -36,6 +36,7 @@ header {
 
 .content {
     max-width: 1274px;
+    /*min-width: 1024px;*/
     width: 100%;
     margin: 0 auto;
 }
@@ -172,15 +173,69 @@ a:hover, a:active {
 
 .img-wrapper {
     position: relative;
-    overflow: hidden;
     box-shadow: 0 0 40px rgba(2, 2, 2, 0.3);
 }
 
-.img-wrapper img {
-    width: 100%;
+.img-wrapper .box {
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.scale:hover img {
+    cursor: pointer;
+    transform-origin: 50% 50%;
+    transform: scale(1.02);
+}
+
+.share-links {
+    margin-top: -91px;
+    position: absolute;
+    right: -27px;
+    top: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.share-links > li {
+    width: 54px;
+    height: 54px;
+    margin: 5px 0;
+}
+
+.share-links a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.share-links a:hover {
+    opacity: 0.5;
+}
+
+.share-twitter-link {
+    background: url('../img/twitter_cycle.png') no-repeat 0 0 transparent;
+}
+
+.share-facebook-link {
+    background: url('../img/fb_cycle.png') no-repeat 0 0 transparent;
+}
+
+.share-vk-link {
+    background: url('../img/vk_cycle.png') no-repeat 0 0 transparent;
+}
+
+.img-wrapper:hover .share-links {
+    opacity: 1;
 }
 
 .announce {
@@ -493,7 +548,7 @@ a:hover, a:active {
 
 .fashion-left-side {
     width: 50%;
-    padding: 5% 40px;
+    padding: 7% 40px 5%;
     box-sizing: border-box;
 }
 
@@ -561,7 +616,6 @@ a:hover, a:active {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
 }
 
 #society {
@@ -614,6 +668,8 @@ a:hover, a:active {
     margin: 0 -40px;
     background: #131313;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 .navigation-links {
@@ -926,5 +982,129 @@ footer .content::before {
 
     .email-wrapper {
         margin-right: 20px;
+    }
+}
+
+/** animations **/
+@media (min-width: 1101px) {
+    .showbusiness-section::before,
+    .art-section::before, .art-col-1,
+    .fashion-section::before, .fashion-col-1,
+    .society-section::before {
+        transition: transform 1s;
+    }
+
+    .showbusiness-section.animated-1::before {
+        transform: translateY(-50%);
+    }
+
+    .showbiz-author-1 {
+        transition: padding 1s;
+    }
+
+    .animated-2 .showbiz-author-1 {
+        padding-bottom: 5%;
+    }
+
+    .showbiz-col-3 {
+        transition: margin 1s;
+    }
+
+    .animated-2 .showbiz-col-3 {
+        margin-top: -13%;
+    }
+
+    .art-section.animated-1::before {
+        transform: translateY(-33%);
+    }
+
+    .animated-2 .art-col-1 {
+        transform: translateY(-23%);
+    }
+
+    .fashion-col-2 {
+        transition: transform 0.8s;
+    }
+
+    .fashion-col-2:nth-child(1) {
+        transition-delay: 0.6s;
+    }
+
+    .animated-1 .fashion-col-2:nth-child(1) {
+        transition-delay: 0s;
+    }
+
+    .fashion-col-2:nth-child(2) {
+        transition-delay: 0.45s;
+    }
+
+    .animated-1 .fashion-col-2:nth-child(2) {
+        transition-delay: 0.15s;
+    }
+
+    .fashion-col-2:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .animated-1 .fashion-col-2:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .fashion-col-2:nth-child(4) {
+        transition-delay: 0.15s;
+    }
+
+    .animated-1 .fashion-col-2:nth-child(4) {
+        transition-delay: 0.45s;
+    }
+
+    .fashion-col-2:nth-child(5) {
+        transition-delay: 0s;
+    }
+
+    .animated-1 .fashion-col-2:nth-child(5) {
+        transition-delay: 0.6s;
+    }
+
+    .animated-1 .fashion-col-2 {
+        transform: translateY(-15px);
+    }
+
+    .fashion-section.animated-2::before {
+        transform: translateY(-54%);
+    }
+
+    .animated-3 .fashion-col-1 {
+        transform: translateY(-15%);
+    }
+
+    .society-section.animated-1::before {
+        transform: translateY(60%);
+    }
+
+    .society-col-2 {
+        opacity: 1;
+        transition: all 0.3s;
+    }
+
+    .animated-2 .society-col-2 {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    .society-col-2.first {
+        transition-delay: 0s;
+    }
+
+    .society-col-2.second {
+        transition-delay: 0.3s;
+    }
+
+    .society-col-2.third {
+        transition-delay: 0.6s;
+    }
+
+    .society-col-2.fourth {
+        transition-delay: 0.9s;
     }
 }
